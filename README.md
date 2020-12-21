@@ -10,7 +10,7 @@ Problems with this approach:
 ### Let's start with the configuration
 We could separate the multiple configuration by using a `profile` so we can take advantage of [Profile Specific Files](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config-files-profile-specific)
 
-[application-client.properties]()
+[application-client.properties](https://github.com/dirkdeyne/spring-boot-admin-and-client/blob/main/src/main/resources/application-client.properties)
 ```properties
 server.address=localhost
 spring.boot.admin.client.url = http://localhost:8081/
@@ -21,7 +21,7 @@ spring.application.name=client-app
 spring.boot.admin.client.instance.name=client-app
 ```
 
-[application-server.properties]()
+[application-admin.properties](https://github.com/dirkdeyne/spring-boot-admin-and-client/blob/main/src/main/resources/application-admin.properties)
 ```properties
 server.address=localhost
 server.port=8081
@@ -29,7 +29,7 @@ server.port=8081
 
 ### Launch the server, and the client with the correct profile.
 
-[DemoApplication]()
+[DemoApplication](https://github.com/dirkdeyne/spring-boot-admin-and-client/blob/main/src/main/java/com/example/demo/DemoApplication.java)
 ```java
 public class DemoApplication {
 
@@ -65,6 +65,6 @@ class DemoClient {
 }
 ```
 
-Launch the Application and we should be good... 
+Launch the Application, and we should be good... 
 - [client](http://localhost:8080)
 - [admin-server](http://localhost:8081/wallboard)
